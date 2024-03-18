@@ -19,7 +19,7 @@ const _nav = [
   {
     component: CNavItem,
     name: 'Thống kê',
-    to: '/admin/dashboard',
+    to: '/dashboard',
     icon: <CIcon icon={cilSpeedometer} customClassName="nav-icon" />,
     // badge: {
     //   color: 'danger',
@@ -33,19 +33,19 @@ const _nav = [
   {
     component: CNavItem,
     name: 'Danh sách sản phẩm',
-    to: '/admin/product/list',
+    to: '/product/list',
     icon: <CIcon icon={cilListRich} customClassName="nav-icon" />,
   },
   {
     component: CNavItem,
     name: 'Báo cáo sản phẩm',
-    to: '/admin/product/dashboard',
+    to: '/product/dashboard',
     icon: <CIcon icon={cilChart} customClassName="nav-icon" />,
   },
   {
     component: CNavItem,
     name: 'Danh mục sản phẩm',
-    to: '/admin/product/category',
+    to: '/product/category',
     icon: <CIcon icon={cilPencil} customClassName="nav-icon" />,
   },
   {
@@ -55,13 +55,13 @@ const _nav = [
   {
     component: CNavItem,
     name: 'Danh sách đơn hàng',
-    to: '/admin/order',
+    to: '/order',
     icon: <CIcon icon={cilTask} customClassName="nav-icon" />
   },
   {
     component: CNavItem,
     name: 'Thông báo',
-    to: '/admin/buttons',
+    to: '/buttons',
     icon: <CIcon icon={cilBell} customClassName="nav-icon" />,
     badge: {
       color: 'success',
@@ -76,7 +76,7 @@ const _nav = [
       {
         component: CNavItem,
         name: 'Form Control',
-        to: '/admin/forms/form-control',
+        to: '/forms/form-control',
       }
     ],
   },
@@ -88,7 +88,7 @@ const _nav = [
       {
         component: CNavItem,
         name: 'CoreUI Free',
-        to: '/admin/icons/coreui-icons',
+        to: '/icons/coreui-icons',
         badge: {
           color: 'success',
           text: 'NEW',
@@ -97,12 +97,12 @@ const _nav = [
       {
         component: CNavItem,
         name: 'CoreUI Flags',
-        to: '/admin/icons/flags',
+        to: '/icons/flags',
       },
       {
         component: CNavItem,
         name: 'CoreUI Brands',
-        to: '/admin/icons/brands',
+        to: '/icons/brands',
       },
     ],
   },
@@ -114,22 +114,22 @@ const _nav = [
       {
         component: CNavItem,
         name: 'Alerts',
-        to: '/admin/notifications/alerts',
+        to: '/notifications/alerts',
       },
       {
         component: CNavItem,
         name: 'Badges',
-        to: '/admin/notifications/badges',
+        to: '/notifications/badges',
       },
       {
         component: CNavItem,
         name: 'Modal',
-        to: '/admin/notifications/modals',
+        to: '/notifications/modals',
       },
       {
         component: CNavItem,
         name: 'Toasts',
-        to: '/admin/notifications/toasts',
+        to: '/notifications/toasts',
       },
     ],
   },

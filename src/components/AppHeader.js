@@ -1,5 +1,5 @@
-import React, {useState} from 'react'
-import {NavLink, useParams} from 'react-router-dom'
+import React from 'react'
+import { NavLink } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import {
   CContainer,
@@ -17,33 +17,10 @@ import {cilBell, cilEnvelopeOpen, cilList, cilMenu, cilSearch} from '@coreui/ico
 import { AppBreadcrumb } from './index'
 import { AppHeaderDropdown } from './header/index'
 import { logo } from 'src/assets/brand/logo'
-import button from "@coreui/coreui/js/src/button";
 
-const AppHeader = (props) => {
+const AppHeader = () => {
   const dispatch = useDispatch()
   const sidebarShow = useSelector((state) => state.sidebarShow)
-  const param = useParams();
-    const [key, setKey] = useState('')
-
-  function actionSearch(e){
-      e.preventDefault();
-    const req = {
-      "key" : key ? key : '',
-      "source": param,
-      "all" : false
-    };
-    props.setDataSearch(req);
-  }
-
-    function actionSearchAll(e){
-        e.preventDefault();
-        const req = {
-            "key" : key ? key : '',
-            "source": param,
-            "all" : true
-        };
-        props.setDataSearch(req);
-    }
 
   return (
     <CHeader position="sticky" className="mb-4">
@@ -58,13 +35,13 @@ const AppHeader = (props) => {
           <CIcon icon={logo} height={48} alt="Logo" />
         </CHeaderBrand>
         <CHeaderNav className="col mw-100">
-          <CForm onSubmit={event => {actionSearch(event)}} className="d-flex customNavbar">
-            <CFormInput value={key} onChange={(e)=>setKey(e.target.value)} className="col-6 navBarInput my-auto" placeholder="Search" size="sm" />
-            <CButton typeof={button} onClick={event => actionSearchAll(event)} color="outline-success" className="my-2 my-sm-0 iconNavbarSass" type="submit">
+          <CForm className="d-flex customNavbar">
+            <CFormInput className="col-6 navBarInput my-auto" placeholder="Search" size="sm" />
+            <CButton color="outline-success" className="my-2 my-sm-0 iconNavbarSass" type="submit">
               <CIcon className='m-auto' icon={cilSearch} size="lg" />
             </CButton>
-            <CButton typeof={button} onClick={event => actionSearchAll(event)} color="outline-success" className="iconNavbar" type="submit">
-              searchAll
+            <CButton color="outline-success" className="iconNavbar" type="submit">
+              Search
             </CButton>
           </CForm>
         </CHeaderNav>

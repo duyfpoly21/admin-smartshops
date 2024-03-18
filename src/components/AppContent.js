@@ -1,14 +1,11 @@
-import React, {Suspense, useEffect} from 'react'
+import React, { Suspense } from 'react'
 import { Navigate, Route, Routes } from 'react-router-dom'
 import { CContainer, CSpinner } from '@coreui/react'
 
 // routes config
 import routes from '../routes'
 
-const AppContent = (props) => {
-  useEffect(() => {
-    console.log(props.dataRes)
-  }, [props.dataRes]);
+const AppContent = () => {
   return (
     <CContainer lg>
       <Suspense fallback={<CSpinner color="primary" />}>
@@ -21,12 +18,12 @@ const AppContent = (props) => {
                   path={route.path}
                   exact={route.exact}
                   name={route.name}
-                  element={<route.element dataRes={props.dataRes} setDataPage={props.setDataPage} />}
+                  element={<route.element />}
                 />
               )
             )
           })}
-          <Route path="/" element={<Navigate to="admin/dashboard" replace />} />
+          <Route path="/" element={<Navigate to="dashboard" replace />} />
         </Routes>
       </Suspense>
     </CContainer>
