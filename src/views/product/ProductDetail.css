@@ -1,0 +1,10 @@
+.label {
+  display: flex;
+  alignItems: center;
+  height: 100%;
+  font-weight: bold;
+}
+
+.input-product-name {
+  font-weight: bold;
+}
